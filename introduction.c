@@ -58,7 +58,7 @@ char Introduction(void)
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
     TypeLine("Welcome to this magical adventure!\n", 10);
     TypeLine("------------------------------------\n", 10);
-    TypeLine("To start the game type 'start', to quit type 'quit', to skip the intro type 'skip'.\n For a list of possible Commands type 'list'.\n", 10);
+    TypeLine("To start the game type 'start', to quit type 'quit', to skip the intro type 'skip'.\n For a list of possible Commands type 'help'.\n", 10);
 
     return true;
 }

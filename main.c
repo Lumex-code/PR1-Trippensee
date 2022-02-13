@@ -1,3 +1,15 @@
+/*	Programing 1 Presentation 14.02.2022
+*	Studygroup: REE-PR1 | HAW-Hamburg
+*	Professor: Prof. Dr. Marc Hensel
+*	Developer: Henrik Maximilian Trippensee
+* 
+*	The Program is a Text Based Adventure in C. The User is asked to solve a puzzle with the given mechanics.
+*	It is just a Demo, but most of the mechanics are implemented
+* 
+*/
+
+
+
 #define _CRT_SECURE_NO_DEPRECATE	//allows one to use strcpy
 #include <stdio.h>					//standard library
 #include <stdbool.h>				//library allowes the usage of booleans | False = 0 and True = 1
