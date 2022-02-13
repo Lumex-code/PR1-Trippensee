@@ -1,0 +1,1 @@
+extern OBJECT* isThere(const char* intention, const char* noun);

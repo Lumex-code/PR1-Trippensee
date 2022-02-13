@@ -1,0 +1,1 @@
+extern char TypeLine(char* line, int time);
