@@ -6,6 +6,7 @@
 #include "inventory.h"  //header allows the usage of "inventory", "drop" and "take" ->  inventory.c
 #include "action.h"     //header allows the usage of "inspect", "talk", "interact"  ->  action.c
 #include "help.h"       //Includes help function, wich lists every command
+#include "object.h"     //included to acess player status
 
 
 
@@ -18,6 +19,9 @@ bool parseAndExecute(char* input)
     // strtok splits string, where space is and replaces it with a /0 -> we get 2 Strings from a single input
     char* verb = strtok(input, " \n");
     char* noun = strtok(NULL, " \n");
+    
+    //checks if ending is fullfiled
+   
 
     if (verb != NULL)
     {

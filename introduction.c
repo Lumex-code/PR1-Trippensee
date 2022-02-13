@@ -3,7 +3,7 @@
 #include <stdio.h>               //standard library
 #include <stdbool.h>             //library allowes the usage of booleans | False = 0 and True = 1
 #include <string.h>              //library for standard string manipulatuion(strcmp-> compares strings)
-#include <Windows.h>             //library used to change the Color of Text
+#include <windows.h>             //library used to change the Color of Text
 #include "Typewriter.h"          //header includes function TypeLine, wich allows for Typed out effect on console
 #include "help.h"                //Includes help function, wich lists every command
 
@@ -58,7 +58,7 @@ char Introduction(void)
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
     TypeLine("Welcome to this magical adventure!\n", 10);
     TypeLine("------------------------------------\n", 10);
-    TypeLine("To start the game type 'start', to quit type 'quit', to skip the intro type 'skip'.\n For a list of possible Commands type 'help'.\n", 10);
+    TypeLine("To start the game type 'start', to quit type 'quit', to skip the intro type 'skip'.\nFor a list of possible commands type 'help'.\n", 10);
 
     return true;
 }
@@ -73,7 +73,7 @@ void startingScene(void)
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
    
-    TypeLine("\nYou wake up in a Dark Room.\n", 60);
+    TypeLine("\nYou wake up in a dark Room.\n", 60);
     TypeLine("You look around, but you can`t seem to see or feel anything. \n", 60);
     TypeLine("You only remember that the elevator was suddenly in a free fall, after that you don't remember anything anymore.\n", 60);
     TypeLine("Suddenly you hear a british sounding voice say:\n", 120);
@@ -89,16 +89,16 @@ void startingScene(void)
     TypeLine("\n*agressive microphone check*\n",40);
 
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1);
-    TypeLine("\nI think this is working....\nAnyway...\n",60);
+    TypeLine("\nI think this is working....\nanyway...\n",60);
     TypeLine("\nWELCOME TO THE MOST EPIC... uh adventure?\n", 60);
 
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
     TypeLine("\n*paper flipping*\n", 40);
 
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1);
-    TypeLine("\nUh... hu.... bla.. bla.. Death... Bla... Magic\n", 70);
+    TypeLine("\nUh... hu.... bla.. bla.. death... bla... magic\n", 70);
     TypeLine("hmmmm\n", 70);
-    TypeLine("Ah! Screw this!\n*Ahem*\nListen you are here for some stupid regulation of Coporate...\n", 60);
+    TypeLine("Ah! screw this!\n*Ahem*\nlisten you are here for some stupid regulation of coporate...\n", 60);
     TypeLine(".........\n",60);
     TypeLine("\noh... sorry, excuse my tardiness,... my name is ", 60);
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);
@@ -112,8 +112,8 @@ void startingScene(void)
     printf("%s??!\n", name);
     TypeLine("..... seriously?\n", 60);
 
-    TypeLine("I will just call you Harvey.\n", 60);
-    TypeLine("Anyway you just have to solve this Puzzle and you can return to your Mortal boring Life, ok?\nOK!\n", 60);
+    TypeLine("I will just call you harvey.\n", 60);
+    TypeLine("Anyway you just have to solve this Puzzle and you can return to your mortal boring Life, ok?\nOK!\n", 60);
     TypeLine("Have Fun! and ", 60);
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
     TypeLine("WATCH OUT!\n",250);

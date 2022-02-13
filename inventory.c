@@ -20,7 +20,11 @@ void executeInventory(void)
 void executeTake(const char *noun)
 {
 	OBJECT* obj = isThere("what you want to get", noun);
-	if (obj == player) {
+	if (obj == NULL)
+	{
+		printf("I dont know what is");
+	}
+	else if (obj == player) {
 		printf("You cant pick yourself up");
 	}
 	else if (obj->location == player)
@@ -65,10 +69,15 @@ void executeTake(const char *noun)
 void executeDrop(const char* item) 
 {
 	OBJECT* obj = isThere("what you want to drop\n", item);
+
 	if (obj->location == player)
 	{
 		printf("You drop %s\n", obj->tag);
 		obj->location = player->location;
+	}
+	else if (obj == NULL)
+	{
+		printf("I dont know what that is.");
 	}
 	else
 	{
