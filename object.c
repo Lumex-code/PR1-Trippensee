@@ -19,7 +19,7 @@ OBJECT objs[] = {
    {"the entrance of a cave"				, "ent_cave"			, forest	,NULL	,NULL	,cave	},
    {"a hut"									, "exi_forest"			, forest	,NULL	,NULL	,hut	},
    {"an old door leading to the outside"	, "ent_forest"			, hut		,NULL	,NULL	,forest	},
-   {"a door to the rest of the hut"		, "exi_bedroom"			, bedroom	,NULL	,NULL	,hut	},
+   {"a door to the rest of the hut"			, "exi_bedroom"			, bedroom	,NULL	,NULL	,hut	},
    {"a door to a bedroom"					, "ent_bedroom"			, hut		,NULL	,NULL	,bedroom},
    {"a backdoor to the backyard"			, "exi_hut"				, hut		,NULL	,NULL	,backyard},
    {"a rusty old door of the hut"			, "ent_hut"				, backyard	,NULL	,NULL	,hut	},
@@ -59,9 +59,10 @@ OBJECT objs[] = {
    {"a mystical rune"		, "rune"		, NULL		, 0		,	1	,NULL},
    {"an old fridge"			, "fridge"		, hut		, 0		,	1	,NULL},
    {"a compost heap"		, "heap"		, backyard	, 0		,	1	,NULL},
-   {"a small rock"			, "rock"		, rack		, 0		,	5	,NULL},
+   {"a small rock"			, "rock"		, cave		, 0		,	5	,NULL},
    {"raw gold ore"			, "rawgold"		, NULL		, 0		,	5	,NULL},
 																
+
    /*weight 0, NULL: an Object of the world(door, entrance ect.)
 	* weight 1: too heavy
 	* weight 2: open for special Objects(not yet implemented)

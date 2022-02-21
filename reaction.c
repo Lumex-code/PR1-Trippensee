@@ -18,6 +18,7 @@ void reactionChest(const char* action);
 void reactionBox(const char* action);
 void reactionHole(const char* action);
 void reactionNote(const char* action);
+void reactionNote(const char* action);
 
 
 
@@ -163,7 +164,7 @@ void reactionOven(const char* action)
 			TypeLine("You are missing some ingredients\n",10);
 		}
 	}
-	else if (strcmp(action, "interact") == 0)
+	else if (strcmp(action, "inspect") == 0)
 		{
 		TypeLine("The oven is a bit dusty but kept clean, on the side of the oven is interestingly a pipe that leads into a casting mold.\n", 20);
 		}
@@ -266,9 +267,64 @@ void reactionNote(const char* action)
 				TypeLine("On the note you can see a sketch of the box you found and the hole you saw in the shed.",10);
 			}
 			else
-			{
+			{ 
 				TypeLine("On the note you can see a sketch of a box and the hole you saw in the shed surrounded by runes", 10);
 			}
+		}
+	}
+}
+void reactionStone(const char* action)
+{
+	if ((strcmp(action, "interact") == 0) || (strcmp(action, "inspect") == 0)) {
+		if (rock->Status == 0)
+		{
+			TypeLine("Its a stone you dummy\n", 10);
+			rock->Status = 1;
+		}
+		else if(rock->Status == 1)
+		{
+			TypeLine("It is a stone, what do you expect?\n", 10);
+		}
+		else
+		{
+			TypeLine("Its Herald the Rock Johnson\n", 30);
+			TypeLine(".....Heh", 40);
+		}
+	}
+	if (strcmp(action, "talk") == 0) {
+		if (rock->Status == 0)
+		{
+			TypeLine("You play a bit around with the rock in the hand\nOut of curiosity you knock on the Rock and ask:\nHello?\n", 30);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+			TypeLine("......\n", 40);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+			TypeLine("Nothing happens\n", 20);
+			rock->Status = 1;
+		}
+		else if (rock->Status == 1)
+		{
+			TypeLine("You take out the rock again and ask: You good rocky?\n", 30);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+			TypeLine("......\n", 30);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+			TypeLine("Dont like that name huh?", 30);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+			TypeLine("......\n", 30);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+			TypeLine("What about Herald?\n.....\nHerald the Rock Johnson!\n", 30);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+			TypeLine("......\n", 30);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+			TypeLine("Heh i am a comedic genius\n", 30);
+			rock->Status = 2;
+		}
+		else
+		{
+			TypeLine("You good Herald?\n", 30);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+			TypeLine("......\n", 40);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+			TypeLine("NICE!\n", 30);
 		}
 	}
 }

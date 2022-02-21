@@ -55,6 +55,10 @@ void executeAction(const char* action, const char* target)
 		{
 			listObjectsAtLocation(fridge);
 		}
+		else if (strcmp(target, "rock") == 0)
+		{
+			reactionStone(action);
+		}
 		else
 		{
 			//Uses this Code if object that is being interacted with is not sepcial enough

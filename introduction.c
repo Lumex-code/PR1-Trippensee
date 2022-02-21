@@ -73,7 +73,7 @@ void startingScene(void)
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
    
-    TypeLine("\nYou wake up in a dark Room.\n", 60);
+    TypeLine("\nYou wake up in a dark room.\n", 60);
     TypeLine("You look around, but you can`t seem to see or feel anything. \n", 60);
     TypeLine("You only remember that the elevator was suddenly in a free fall, after that you don't remember anything anymore.\n", 60);
     TypeLine("Suddenly you hear a british sounding voice say:\n", 120);
